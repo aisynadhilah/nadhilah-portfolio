@@ -1,7 +1,8 @@
-# Hallo!, I'm Rihhadatul Aisy Nadhilah 👋
-Fresh graduate passionate about Data Analytics, Machine Learning, and Risk-related Analysis.
+# Welcome to My Portfolio Repository
+## Hallo!, I'm Rihhadatul Aisy Nadhilah 👋
+This repository contains a curated collection of projects I’ve worked on throughout my university studies, internships, and personal explorations in Data Analytics, Machine Learning, and Risk-related Analysis.
 
-## Skills
+## 🛠️ Skills Overview
 ### Core Technical Skills
 1. **Python for Data & ML** — preprocessing, pipelines, model development
 2. **Machine Learning** — BiLSTM, cross-validation, model evaluation
@@ -10,8 +11,19 @@ Fresh graduate passionate about Data Analytics, Machine Learning, and Risk-relat
 5. **Desktop Applications** — PyQt5 GUI (signal plotting & predictions)
 
 ### Tools & Environment
-VSCode • Git • Jupyter Notebook • STM32CubeIDE • Excel
+VSCode • Git • Jupyter Notebook • Excel • STM32CubeIDE
 
 ### Professional Skills
 Analytical mindset • Clear communication • Team coordination • Time management
+
+## 📂 Repository Structure
+All projects are organized into separate folders for clarity and easy navigation.
+
+## 📫 Contact
+If you have any questions or collaboration opportunities, feel free to reach out:
+LinkedIn: https://www.linkedin.com/in/rihhadatulaisynadhilah/
+Email: ranadhilah17@gmail.com
+
+## Thank you for visiting!
+
 
