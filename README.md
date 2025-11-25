@@ -21,6 +21,7 @@ All projects are organized into separate folders for clarity and easy navigation
 
 ## 📫 Contact
 If you have any questions or collaboration opportunities, feel free to reach out:
+
 LinkedIn: https://www.linkedin.com/in/rihhadatulaisynadhilah/
 Email: ranadhilah17@gmail.com
 
