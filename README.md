@@ -1,5 +1,5 @@
 # Welcome to My Portfolio Repository
-## Hallo!, I'm Rihhadatul Aisy Nadhilah 👋
+## Hallo!, I'm Rihhadatul Aisy Nadhilah👋
 This repository contains a curated collection of projects I’ve worked on throughout my university studies, internships, and personal explorations in Data Analytics, Machine Learning, and Risk-related Analysis.
 
 ## 🛠️ Skills Overview
