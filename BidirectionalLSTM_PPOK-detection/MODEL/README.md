@@ -10,6 +10,7 @@ Semua fold menggunakan arsitektur yang sama
 - Dense(48, ReLU)
 - Dropout(0.2)
 - Output: Sigmoid (binary classification: Normal vs PPOK)
+
 Model dilatih menggunakan:
 - Binary Cross-Entropy dengan label smoothing = 0.05
 - Optimizer: Adam, lr = 5e-5
