@@ -19,15 +19,15 @@ Analytical mindset • Clear communication • Team coordination • Time manage
 ## 📂 Repository Structure
 All projects are organized into separate folders for clarity and easy navigation.
 
-📁 BidirectionalLSTM_PPOK-detection
+📊 BidirectionalLSTM_PPOK-detection
 
   - Deep learning project (BiLSTM + DWT + MFCC) for detecting COPD from lung sound recordings. Built as part of my undergraduate thesis.
 
-📁 Image_Processing
+📊 Image_Processing
 
   - Classical image processing pipeline for segmenting and measuring acne and rosacea lesion areas based on texture, intensity, and color characteristics.
 
-📁 Supervised-learning-model-evaluation_Project
+📊 Supervised-learning-model-evaluation_Project
 
   - Comparison of multiple supervised learning models with feature selection and performance evaluation across four classifiers.
 
