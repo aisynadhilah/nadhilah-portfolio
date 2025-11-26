@@ -19,6 +19,11 @@ Analytical mindset • Clear communication • Team coordination • Time manage
 ## 📂 Repository Structure
 All projects are organized into separate folders for clarity and easy navigation.
 
+📁 BidirectionalLSTM_PPOK-detection
+📁 Image_Processing
+📁 Supervised-learning-model-evaluation_Project
+
+
 ## 📫 Contact
 If you have any questions or collaboration opportunities, feel free to reach out:
 - LinkedIn: https://www.linkedin.com/in/rihhadatulaisynadhilah/
