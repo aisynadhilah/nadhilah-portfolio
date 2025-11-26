@@ -4,8 +4,6 @@ import math
 
 # =========================================================
 #                1. RESAMPLING
-# =========================================================
-
 def resample_signal(signal, original_fs, target_fs=11025):
     """
     Resample sinyal lung sound ke target sampling rate (default 11025 Hz).
@@ -20,7 +18,6 @@ def resample_signal(signal, original_fs, target_fs=11025):
 
 # =========================================================
 #            2. DWT LEVEL-3 (Daubechies 4)
-# =========================================================
 
 # Daubechies 4 Coefficients
 h = np.array([
@@ -42,7 +39,6 @@ ih = [
 ]
 
 ig = [(-1) ** i * ih[::-1][i] for i in range(4)]
-
 
 def dekomposisi(signal):
     """
@@ -76,8 +72,6 @@ def dwt_level3(signal):
 
 # =========================================================
 #              3. REKONSTRUKSI SINYAL
-# =========================================================
-
 def reconstruct_signal(a, d):
     """
     Rekonstruksi sinyal menggunakan inverse DWT Daubechies-4.
@@ -94,8 +88,7 @@ def reconstruct_signal(a, d):
 
 
 # =========================================================
-#              MAIN PIPELINE (Opsional)
-# =========================================================
+#                   MAIN PIPELINE
 
 def preprocess_pipeline(raw_signal, raw_fs):
     """
