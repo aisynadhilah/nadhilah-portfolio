@@ -3,6 +3,10 @@
 
 Project ini berfokus pada pemilihan fitur yang relevan serta evaluasi performa 4 model klasifikasi berbeda. Tujuan utamanya adalah memahami bagaimana masing-masing algoritma bekerja pada dataset yang digunakan, membandingkan akurasi, serta menganalisis faktor-faktor yang memengaruhi performa model.
 
+## Live Demo
+
+[![Streamlit App](https://img.shields.io/badge/Streamlit-Live%20App-red?logo=streamlit)](https://fp-sdbdss-020.streamlit.app/)
+
 ## Rumusan Masalah
 Final project ini dirancang untuk menjawab dua hal utama:
 1. Bagaimana melakukan pemilihan fitur yang signifikan terhadap target kelas? Termasuk proses identifikasi fitur yang paling berpengaruh melalui analisis statistik dan eksplorasi pola pada data.
@@ -29,6 +33,5 @@ Performa masing-masing model adalah sebagai berikut:
 1. Setiap model menunjukkan performa yang berbeda, dengan akurasi tertinggi pada Logistic Regression (93.75%) dan terendah pada Naïve Bayes (72.92%).
 2. Logistic Regression menjadi model terbaik.
 Model ini mampu bekerja sangat baik pada data yang bersifat linier atau mendekati linieritas. Hubungan antar fitur yang cukup jelas membuat LR mudah menangkap pola distribusi dan menghasilkan prediksi yang stabil.
-
 3. Naïve Bayes memiliki akurasi terendah.
 Hal ini berkaitan dengan asumsi independensi antar fitur. Jika terdapat korelasi kuat antar fitur pada dataset, performa Naïve Bayes akan menurun karena model tidak dirancang untuk menangani dependensi tersebut.
