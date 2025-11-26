@@ -1,4 +1,4 @@
-# Skin Lesion Segmentation — Acne & Rosacea Detection
+# Skin Lesion Segmentation - Acne & Rosacea Detection
 ### Image Processing Pipeline for Segmenting and Identifying Acne & Rosacea Regions
 
 Repository ini berisi implementasi lengkap segmentasi citra penyakit kulit jenis Acne dan Rosacea menggunakan metode classical image processing. Pipeline fokus pada pemisahan area kulit yang terinfeksi berdasarkan tekstur, intensitas, dan karakteristik warna, untuk kemudian dihitung luas area lesi yang terdeteksi.
