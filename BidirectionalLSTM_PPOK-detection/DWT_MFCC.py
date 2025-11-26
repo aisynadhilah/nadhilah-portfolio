@@ -1,4 +1,4 @@
-# === dwt_mfcc.py ===
+# === DWT - MFCC ===
 import numpy as np
 import math
 from scipy.signal import resample
