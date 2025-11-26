@@ -3,6 +3,12 @@
 
 Repository ini berisi implementasi lengkap segmentasi citra penyakit kulit jenis Acne dan Rosacea menggunakan metode classical image processing. Pipeline fokus pada pemisahan area kulit yang terinfeksi berdasarkan tekstur, intensitas, dan karakteristik warna, untuk kemudian dihitung luas area lesi yang terdeteksi.
 
+## 🌐 Live Demo
+
+[![Streamlit App](https://img.shields.io/badge/Streamlit-Live%20App-red?logo=streamlit)](https://fppcm-kelompok1.streamlit.app/)
+
+NOTE: inputkan gambar 1 dan gambar 2 yang diberikan.
+
 ## Tujuan Project
 - Melakukan segmentasi pada citra wajah yang mengandung Acne atau Rosacea.
 - Mengekstraksi objek-objek yang dianggap sebagai lesi kulit.
