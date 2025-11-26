@@ -7,6 +7,7 @@ Project ini berfokus pada pemilihan fitur yang relevan serta evaluasi performa 4
 
 [![Streamlit App](https://img.shields.io/badge/Streamlit-Live%20App-red?logo=streamlit)](https://fp-sdbdss-020.streamlit.app/)
 
+Data yang dimasukkan ke aplikasi berupa file data_(ekstraksi_fitur).xlsx.
 ## Rumusan Masalah
 Final project ini dirancang untuk menjawab dua hal utama:
 1. Bagaimana melakukan pemilihan fitur yang signifikan terhadap target kelas? Termasuk proses identifikasi fitur yang paling berpengaruh melalui analisis statistik dan eksplorasi pola pada data.
