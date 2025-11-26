@@ -48,21 +48,23 @@ This project aims to detect Chronic Obstructive Pulmonary Disease (COPD) based o
 
 BidirectionalLSTM_PPOK-detection/
 
-│── README.md               # Project documentation (this file)
+│── README.md                        # Project documentation (this file)
 
-│── dwt_mfcc.py             # DWT + MFCC feature extraction
+│── Pre-Processing.py                # Pre-processing
 
-│── model_training.py       # Full BiLSTM training pipeline
+│── DWT_MFCC.py                      # DWT + MFCC feature extraction
 
-│── prediction.py           # Real-time prediction script (Raspberry Pi)
+│── Model_Training_Evaluation.py     # Full BiLSTM training pipeline
 
-│── GUI.py                  # Graphical User Interface - Touchscreen
+│── Prediction.py                    # Real-time prediction script (Raspberry Pi)
 
-│── models/                 # Saved 5-fold .keras models
+│── GUI/                             # Graphical User Interface - Touchscreen
 
-│── results/                # Plots, evaluation metrics
+│── MODEL/                           # Saved 5-fold .keras models
 
-│── data/                   # dataset
+│── Results/                         # Evaluation metrics
+
+│── Dataset/                         # dataset
 
 ## Key Results
 - Achieved 91.06% training accuracy, 89.05% validation accuracy, and 89.34% test accuracy.
