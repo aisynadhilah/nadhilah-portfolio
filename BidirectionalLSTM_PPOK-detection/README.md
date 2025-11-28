@@ -50,7 +50,7 @@ BidirectionalLSTM_PPOK-detection/
 
 │── README.md                        # Project documentation (this file)
 
-│── Pre-Processing.py                # Pre-processing
+│── Pre-Processing.py                # Pre-processing code
 
 │── DWT_MFCC.py                      # DWT + MFCC feature extraction
 
@@ -62,9 +62,9 @@ BidirectionalLSTM_PPOK-detection/
 
 │── MODEL/                           # Saved 5-fold .keras models
 
-│── Results/                         # Evaluation metrics
+│── RESULTS/                         # Evaluation metrics
 
-│── Dataset/                         # dataset
+│── DATASET/                         # dataset
 
 ## Key Results
 - Achieved 91.06% training accuracy, 89.05% validation accuracy, and 89.34% test accuracy.
