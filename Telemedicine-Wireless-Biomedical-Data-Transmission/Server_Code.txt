@@ -1,0 +1,144 @@
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <unistd.h>
+#include <arpa/inet.h>
+#include <pthread.h>
+#include <semaphore.h>
+
+#define PORT 1717 // Sesuaikan dengan port yang digunakan pada ESP8266
+#define BUFFER_SIZE 100000
+
+int server_fd, new_socket;
+char buffer[BUFFER_SIZE];
+sem_t data_semaphore;
+pthread_mutex_t buffer_mutex;
+
+void *server_task(void *arg) {
+    struct sockaddr_in address;
+    int opt = 1;
+    int addrlen = sizeof(address);
+
+    // Buat socket file descriptor
+    if ((server_fd = socket(AF_INET, SOCK_STREAM, 0)) == 0) {
+        perror("socket failed");
+        exit(EXIT_FAILURE);
+    }
+
+    // Atur opsi socket
+    if (setsockopt(server_fd, SOL_SOCKET, SO_REUSEADDR | SO_REUSEPORT, &opt, sizeof(opt))) {
+        perror("setsockopt");
+        close(server_fd);
+        exit(EXIT_FAILURE);
+    }
+
+    // Atur alamat dan port server
+    address.sin_family = AF_INET;
+    address.sin_addr.s_addr = INADDR_ANY;
+    address.sin_port = htons(PORT);
+
+    // Bind socket ke alamat dan port
+    if (bind(server_fd, (struct sockaddr*)&address, sizeof(address)) < 0) {
+        perror("bind failed");
+        close(server_fd);
+        exit(EXIT_FAILURE);
+    }
+
+    // Dengarkan koneksi masuk
+    if (listen(server_fd, 3) < 0) {
+        perror("listen");
+        close(server_fd);
+        exit(EXIT_FAILURE);
+    }
+
+    printf("Server listening on port %d\n", PORT);
+
+    // Terima koneksi dari client
+    if ((new_socket = accept(server_fd, (struct sockaddr *)&address, (socklen_t*)&addrlen)) < 0) {
+        perror("accept");
+        close(server_fd);
+        exit(EXIT_FAILURE);
+    }
+
+    printf("Connected to client\n");
+
+    // Clear file content
+    FILE *file = fopen("output1.txt", "w");
+    fclose(file);
+
+    // Terima data dari client dan sinyal ke task penulis
+    while (1) {
+        int valread = read(new_socket, buffer, BUFFER_SIZE);
+        if (valread < 0) {
+            perror("read");
+            break;
+        } else if (valread == 0) {
+            // Connection closed by client
+            break;
+        }
+
+        // Lock the mutex before accessing the buffer
+        pthread_mutex_lock(&buffer_mutex);
+
+        buffer[valread] = '\0';
+        sem_post(&data_semaphore);  // Sinyal bahwa data telah diterima
+
+        // Unlock the mutex after accessing the buffer
+        pthread_mutex_unlock(&buffer_mutex);
+    }
+
+    close(new_socket);
+    close(server_fd);
+    return NULL;
+}
+
+void *write_task(void *arg) {
+    // Tulis data ke file saat sinyal diterima
+    while (1) {
+        sem_wait(&data_semaphore);
+
+        // Lock the mutex before accessing the buffer
+        pthread_mutex_lock(&buffer_mutex);
+
+        // Ganti semua koma dengan baris baru
+        for (int i = 0; i < strlen(buffer); i++) {
+            if (buffer[i] == ',') {
+                buffer[i] = '\n';
+            }
+        }
+
+        FILE *file = fopen("output1.txt", "a");
+        fprintf(file, "%s\n", buffer);  // Tambahkan \n untuk baris baru
+        printf("Received data:\n%s\n", buffer);
+        fclose(file);
+
+        // Unlock the mutex after accessing the buffer
+        pthread_mutex_unlock(&buffer_mutex);
+    }
+    return NULL;
+}
+
+int main() {
+    pthread_t server_thread, write_thread;
+
+    // Inisialisasi semaphore
+    sem_init(&data_semaphore, 0, 0);
+
+    // Initialize the mutex
+    pthread_mutex_init(&buffer_mutex, NULL);
+
+    // Buat task server dan task penulis
+    pthread_create(&server_thread, NULL, server_task, NULL);
+    pthread_create(&write_thread, NULL, write_task, NULL);
+
+    // Tunggu task selesai
+    pthread_join(server_thread, NULL);
+    pthread_join(write_thread, NULL);
+
+    // Bersihkan semaphore dan mutex
+    sem_destroy(&data_semaphore);
+    pthread_mutex_destroy(&buffer_mutex);
+
+    return 0;
+}
