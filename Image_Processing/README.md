@@ -52,3 +52,8 @@ NOTE: inputkan gambar 1 dan gambar 2 yang diberikan.
 1. Pipeline ini berbasis traditional image processing, bukan deep learning.
 2. Akurasi segmentasi sangat dipengaruhi kualitas pencahayaan dan noise pada citra.
 3. Project ini dapat menjadi dasar untuk klasifikasi ML atau CNN di tahap berikutnya.
+
+## Author
+Rihhadatul Aisy Nadhilah
+- LinkedIn: https://www.linkedin.com/in/rihhadatulaisynadhilah/
+- Email: ranadhilah17@gmail.com
