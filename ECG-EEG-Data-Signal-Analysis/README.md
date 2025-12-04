@@ -9,6 +9,12 @@ Analisis sinyal Electrocardiogram (ECG) dan Electroencephalogram (EEG) dari dua 
 6. Visualisasi menggunakan Python
 7. Kesimpulan kondisi subjek berdasarkan analisis data.
 
+## 🌐 Live Demo
+
+[![Streamlit App](https://img.shields.io/badge/Streamlit-Live%20App-red?logo=streamlit)](https://asnfp111.streamlit.app/)
+
+NOTE: inputkan data sesuai nomor subjek. Data dalam formal excel.
+
 ## 1. Project Overview
 
 Tujuan utama proyek ini adalah memahami karakteristik sinyal biomedik melalui proses teknik sinyal, yaitu:
