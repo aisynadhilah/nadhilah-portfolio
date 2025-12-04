@@ -36,3 +36,8 @@ Performa masing-masing model adalah sebagai berikut:
 Model ini mampu bekerja sangat baik pada data yang bersifat linier atau mendekati linieritas. Hubungan antar fitur yang cukup jelas membuat LR mudah menangkap pola distribusi dan menghasilkan prediksi yang stabil.
 3. Naïve Bayes memiliki akurasi terendah.
 Hal ini berkaitan dengan asumsi independensi antar fitur. Jika terdapat korelasi kuat antar fitur pada dataset, performa Naïve Bayes akan menurun karena model tidak dirancang untuk menangani dependensi tersebut.
+
+## Author
+Rihhadatul Aisy Nadhilah
+- LinkedIn: https://www.linkedin.com/in/rihhadatulaisynadhilah/
+- Email: ranadhilah17@gmail.com
