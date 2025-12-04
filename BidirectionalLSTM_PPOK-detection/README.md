@@ -76,3 +76,8 @@ BidirectionalLSTM_PPOK-detection/
 - Extend the system to classify other respiratory diseases using lung sound signals.
 - Integrate the model into a more advanced monitoring interface supported by a centralized database for long-term patient tracking.
 - Deploy the system on real-time embedded hardware (Raspberry Pi) to process data directly from digital stethoscopes.
+
+## Author
+Rihhadatul Aisy Nadhilah
+- LinkedIn: https://www.linkedin.com/in/rihhadatulaisynadhilah/
+- Email: ranadhilah17@gmail.com
