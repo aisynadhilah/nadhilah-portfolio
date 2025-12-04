@@ -72,5 +72,7 @@ Tujuan utama proyek ini adalah memahami karakteristik sinyal biomedik melalui pr
 - Interpretasi fisiologis sinyal otak dan jantung
 - Laporan teknis & analitis
 
-## 5. Authors
+## 5. Author
 Rihhadatul Aisy Nadhilah
+- LinkedIn: https://www.linkedin.com/in/rihhadatulaisynadhilah/
+- Email: ranadhilah17@gmail.com
